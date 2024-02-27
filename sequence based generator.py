@@ -15,7 +15,6 @@ nr_letters = int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-#Eazy Level - Order not randomised:
 code1 = ''
 code2 = ''
 code3 = ''
@@ -30,14 +29,3 @@ for k in range(0,nr_numbers):
   code3 += temp3
 passcode = code1+code2+code3
 print(passcode)
-#Hard Level - Order of characters randomised:
-
-list_code = list(code1 + code2 + code3)
-random.shuffle(list_code)
-random.shuffle(list_code)
-random.shuffle(list_code)
-
-shuffled_passcode = ''
-for n in list_code:
-  shuffled_passcode += n
-print(shuffled_passcode)
