@@ -25,38 +25,40 @@ elif use == "n":
     up_letters = int(input("How many upper case letters would you like in your password?\n"))
     nr_symbols = int(input("How many symbols would you like?\n"))
     nr_numbers = int(input("How many numbers would you like?\n"))
-# If a wrong input is given.
-else:
-   print("Please Enter a valid input.")
+
 # Create variables to hold the random characters chosen for the password.
 code1 = ''
 code2 = ''
 code3 = ''
 code4 = ''
-# Cycle through the characters and choose.
-for i in range(0,up_letters):
-  temp = random.choice(lower_letters)
-  code1 += temp
-for i in range(0,lr_letters):
-  temp1 = random.choice(upper_letters)
-  code2 += temp1
-for j in range(0,nr_symbols):
-  temp2 = random.choice(symbols)
-  code3 += temp2
-for k in range(0,nr_numbers):
-  temp3 = random.choice(numbers)
-  code4 += temp3
-# Convert the strings to a list after contacting them.
-list_code = list(code1 + code2 + code3+code4)
-# shuffle through the list 3 times because I like it.
-random.shuffle(list_code)
-random.shuffle(list_code)
-random.shuffle(list_code)
-# Convert the list to a string that gets displayed to the user.
-shuffled_passcode = ''
-for n in list_code:
-  shuffled_passcode += n
-print(shuffled_passcode)
-
+# Cycle through the characters and choose if "y" or "n" is inputted..
+if use == "y" or use == "n":
+    for i in range(0,up_letters):
+        temp = random.choice(lower_letters)
+        code1 += temp
+    for i in range(0,lr_letters):
+        temp1 = random.choice(upper_letters)
+        code2 += temp1
+    for j in range(0,nr_symbols):
+        temp2 = random.choice(symbols)
+        code3 += temp2
+    for k in range(0,nr_numbers):
+        temp3 = random.choice(numbers)
+        code4 += temp3
+    # Convert the strings to a list after contacting them.
+    list_code = list(code1 + code2 + code3+code4)
+    # shuffle through the list 3 times because I like it.
+    random.shuffle(list_code)
+    random.shuffle(list_code)
+    random.shuffle(list_code)
+    # Convert the list to a string that gets displayed to the user.
+    shuffled_passcode = ''
+    for n in list_code:
+      shuffled_passcode += n
+    print(shuffled_passcode)
+    
+# If a wrong input is given.
+else:
+  print("Please Enter a valid input.")
 input("Tap ENTER to EXIT!")
 
