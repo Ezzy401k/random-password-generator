@@ -18,19 +18,19 @@ The program prompts the user to choose between a random password generation or c
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Ezzy401k/superior_password_generator.git
+git clone https://github.com/Ezzy401k/random-password-generator.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd superior password generator
+cd random password generator
 ```
 
 3. Run the program:
 
 ```bash
-python superior password generator.py
+python random password generator.py
 ```
 
 4. Choose between random password generation ('y') or custom input ('n').
